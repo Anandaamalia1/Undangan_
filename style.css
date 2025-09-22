@@ -39,9 +39,6 @@ body {
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
 }
 
 /* Base Styles */
@@ -209,6 +206,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; 
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1317,3 +1315,4 @@ body {
 @media (min-width: 768px) {
     .main-couple-names { font-size: 3em; margin-top: 0; }
 }
+
