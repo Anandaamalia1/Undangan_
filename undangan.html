@@ -26,7 +26,11 @@
   </div>
 
   <!-- 🎵 Musik -->
-  <audio id="myAudio" src="aset/lagu.mp3" loop autoplay></audio>
+ <audio id="myAudio" loop>
+  <source src="aset/lagu.mp3" type="audio/mpeg">
+  <source src="aset/lagu.ogg" type="audio/ogg">
+  <source src="aset/lagu.wav" type="audio/wav">
+</audio>
 
   <!-- 📜 Konten Undangan (disembunyikan dulu) -->
   <div id="mainUndanganWrapper" class="hidden-content">
@@ -233,3 +237,4 @@
 </body>
 
 </html>
+
