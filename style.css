@@ -1142,8 +1142,8 @@ main {
         100% { transform: translate(15%, -5%); }
     }
     .leaf-ornament-left, .leaf-ornament-right {
-        width: 360px; /* Diperbesar sedikit dari 250px */
-        max-width: 70vw; /* Diperbesar dari 50vw */
+        width: 400px; /* Diperbesar sedikit dari 250px */
+        max-width: 600vw; /* Diperbesar dari 50vw */
         font-size: 0;
         line-height: 0;
         color: transparent;
