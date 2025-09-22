@@ -39,6 +39,7 @@ body {
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
+    
     background-image: url('aset/bg3.png');
     background-size: cover;
     background-position: center;
@@ -62,6 +63,7 @@ body::before {
     z-index: -1;
 }
 main {
+     background-image: url('aset/bg3.png');
     position: relative;
     background-color: transparent; /* Pastikan main transparan agar background terlihat */
     z-index: 1; /* Konten di atas overlay */
@@ -1330,3 +1332,4 @@ main {
 @media (min-width: 768px) {
     .main-couple-names { font-size: 3em; margin-top: 0; }
 }
+
