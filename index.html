@@ -64,6 +64,24 @@
             document.getElementById('guestName').textContent = "Tamu Terhormat";
         }
     };
+       function openInvitation() {
+            const myAudio = document.getElementById('myAudio');
+            
+            // Coba putar audio. Ini akan berjalan karena ada interaksi pengguna (klik).
+            if (myAudio) {
+                myAudio.play().then(() => {
+                    // Audio berhasil diputar, sekarang arahkan ke halaman undangan.
+                    window.location.href = 'undangan.html';
+                }).catch(error => {
+                    // Jika gagal (normal di beberapa browser), tetap lanjutkan navigasi.
+                    console.warn("Audio play was blocked. Proceeding with navigation.", error);
+                    window.location.href = 'undangan.html';
+                });
+            } else {
+                // Jika tag audio tidak ada, langsung navigasi.
+                window.location.href = 'undangan.html';
+            }
+        }
 
     function openUndangan() {
         const guestParam = getQueryParam('to');
@@ -87,3 +105,4 @@
 </body>
 
 </html>
+
