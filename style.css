@@ -39,11 +39,33 @@ body {
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
+    background-image: url('aset/bg3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mengunci latar belakang agar tidak ikut bergulir */
     overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
-
+/* Tambahkan lapisan gelap (overlay) di atas background */
+/* Tambahkan lapisan gelap (overlay) di atas background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.03); /* Hitam dengan transparansi 10% */
+    /* Atau coba rgba(0, 0, 0, 0.2) jika ingin sedikit lebih gelap */
+    z-index: -1;
+}
+main {
+    position: relative;
+    background-color: transparent; /* Pastikan main transparan agar background terlihat */
+    z-index: 1; /* Konten di atas overlay */
+}
 
 /* Base Styles */
 .card-section-container {
@@ -1120,7 +1142,7 @@ body {
         100% { transform: translate(15%, -5%); }
     }
     .leaf-ornament-left, .leaf-ornament-right {
-        width: 400px; /* Diperbesar sedikit dari 250px */
+        width: 450px; /* Diperbesar sedikit dari 250px */
         max-width: 600vw; /* Diperbesar dari 50vw */
         font-size: 0;
         line-height: 0;
@@ -1153,11 +1175,11 @@ body {
 
     /* Undangan Utama */
     .undangan-content { padding-top: 0; padding-bottom: 0; }
-    .main-invitation-section { padding: 10px 15px; min-height: 100vh; }
-    .main-invitation-title { font-size: 2em; margin-top: 10px; }
-    .main-couple-illustration { width: 80%; max-width: 160px; }
-    .main-assalamualaikum-text { font-size: 0.8em; line-height: 1.2; margin-right: 20px; margin-left: 20px; }
-    .main-couple-names { font-size: 2.1em; margin-top: 25px; margin-bottom: 5px; }
+    .main-invitation-section { padding: 10px 15px; min-height: 100vh; margin-top: -30px;}
+    .main-invitation-title { font-size: 2.5em; margin-top: 10px; }
+    .main-couple-illustration { width: 80%; max-width: 190px; }
+    .main-assalamualaikum-text { font-size: 0.8em; line-height: 1; margin-right: 20px; margin-left: 20px; }
+    .main-couple-names { font-size: 2.5em; margin-top: 35px; margin-bottom: 5px; }
     .full-names-wrapper { gap: 10px; margin-top: 0; }
     .main-afriani-utari, .main-muhammad-yusuf { font-size: 0.7em; }
     .main-event-details {
@@ -1171,7 +1193,7 @@ body {
 
     /* Countdown Timer */
     .countdown-container { max-width: 300px; padding: 20px 5px; }
-    .countdown-title { font-size: 2em; margin-bottom: 15px; padding: 0 5px; box-sizing: border-box; }
+    .countdown-title { font-size: 2.5em; margin-bottom: 15px; padding: 0 5px; box-sizing: border-box; }
     .countdown-timer { gap: 3px; width: auto; flex-grow: 0; max-width: 100%; padding: 0 2px; box-sizing: border-box; }
     .countdown-box { min-width: 65px; padding: 8px 3px; }
     .countdown-number { font-size: 1.5em; }
@@ -1180,7 +1202,7 @@ body {
     
     /* Ayat/Doa */
     .doa-text-container { max-width: 350px; padding: 20px 5px; border-radius: 10px; }
-    .doa-title { font-size: 2em; margin-bottom: 10px; padding: 0 5px; box-sizing: border-box; }
+    .doa-title { font-size: 2.5em; margin-bottom: 10px; padding: 0 5px; box-sizing: border-box; }
     .doa-arabic-text { font-size: 1.5em; }
     .doa-transliteration { font-size: 0.6em; padding-left: 20px; padding-right: 2px; }
     .doa-hadits-source { font-size: 0.8em; margin-bottom: 10px; }
@@ -1189,7 +1211,7 @@ body {
     
     /* Peta */
     .maps-container { max-width: 320px; padding: 20px 10px; border-radius: 10px; }
-    .maps-title { font-size: 2em; margin-bottom: 15px; }
+    .maps-title { font-size: 2.5em; margin-bottom: 15px; }
     .maps-description { font-size: 0.8em; margin-bottom: 20px; }
     .map-embed-wrapper { padding-bottom: 75%; }
     .maps-direction-btn { font-size: 0.7em; padding: 10px 20px; }
@@ -1197,9 +1219,9 @@ body {
     /* Rekening */
     #rekening-section { padding: 5px 0; }
     .rekening-container { max-width: 500px; padding: 10px; }
-    .rekening-title { font-size: 2em; margin-bottom: 8px; }
-    .rekening-description { font-size: 0.8em; margin-bottom: 10px; }
-    .atm-card { width: 100%; max-width: 260px; padding: 8px; margin-bottom: 10px; }
+    .rekening-title { font-size: 2.5em; margin-bottom: 8px; }
+    .rekening-description { font-size: 0.8em; margin-bottom: 10px; margin-top: 20px;}
+    .atm-card { width: 100%; max-width: 260px; padding: 8px; margin-bottom: 20px; margin-top: 20px;}
     .bank-name { font-size: 0.7em; }
     .chip-icon { width: 18px; height: 12px; }
     .atm-card-number { margin-bottom: 12px; }
@@ -1210,12 +1232,12 @@ body {
     }
     .copy-btn { font-size: 0.5em; padding: 2px 5px; }
     .atm-card-footer { font-size: 0.45em; }
-    .cash-gift-info { font-size: 0.8em; margin-top: 15px; line-height: 1.3; }
+    .cash-gift-info { font-size: 0.8em; margin-top: 30px; line-height: 1; }
     
     /* RSVP */
     .rsvp-container { max-width: 500px; padding: 15px 10px; }
-    .rsvp-title { font-size: 2em; margin-bottom: 10px; margin-top: 30px;}
-    .rsvp-description { font-size: 0.8em; margin-bottom: 15px; margin-left: 40px; margin-top: 20px;}
+    .rsvp-title { font-size: 2.5em; margin-bottom: 10px; margin-top: 20px;}
+    .rsvp-description { font-size: 0.8em; margin-bottom: 15px; margin-left: 20px; margin-top: 30px;}
     .rsvp-form { gap: 10px; }
     .form-label { 
         font-size: 0.85em; 
@@ -1308,5 +1330,3 @@ body {
 @media (min-width: 768px) {
     .main-couple-names { font-size: 3em; margin-top: 0; }
 }
-
-
