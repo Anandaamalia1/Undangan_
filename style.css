@@ -1111,8 +1111,6 @@ main {
   align-items: center;
 }
 
-
-/* --- Responsif untuk Mobile (DIKONSOLIDASI) --- */
 /* --- Responsif untuk Mobile (DIKONSOLIDASI) --- */
 @media (max-width: 600px) {
     /* Halaman Pembuka */
@@ -1122,7 +1120,7 @@ main {
     .header-left { font-size: 0.7em; }
     .logo-text { font-size: 1.3em; }
     .logo-accent-img { width: 50px; height: auto; }
-    .initials { font-size: 2.1em; }
+    .initials { font-size: 2.5em; }
     .responsive-box {
     width: 88%;
     padding: 20px 15px;
@@ -1142,8 +1140,8 @@ main {
         100% { transform: translate(15%, -5%); }
     }
     .leaf-ornament-left, .leaf-ornament-right {
-        width: 450px; /* Diperbesar sedikit dari 250px */
-        max-width: 600vw; /* Diperbesar dari 50vw */
+        width: 500px; /* Diperbesar sedikit dari 250px */
+        max-width: 700vw; /* Diperbesar dari 50vw */
         font-size: 0;
         line-height: 0;
         color: transparent;
@@ -1161,13 +1159,18 @@ main {
     }
 
     /* Ukuran dan Padding Umum */
-    .countdown-container,
     .atm-card,
     .card-section-container,
     .maps-box,
     .rsvp-form,
     .rekening-container { /* Tambahkan .rekening-container untuk memastikan konsistensi */
         width: 88%; /* Melebarkan form dari 90% ke 95% */
+        padding: 20px 15px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    .countdown-container{
+        width: 100%; /* Melebarkan form dari 90% ke 95% */
         padding: 20px 15px;
         box-sizing: border-box;
         margin: 0 auto;
@@ -1192,7 +1195,7 @@ main {
     .main-separator-line { display: none; }
 
     /* Countdown Timer */
-    .countdown-container { max-width: 300px; padding: 20px 5px; }
+    .countdown-container { max-width: 500px; padding: 20px 5px; }
     .countdown-title { font-size: 2.5em; margin-bottom: 15px; padding: 0 5px; box-sizing: border-box; }
     .countdown-timer { gap: 3px; width: auto; flex-grow: 0; max-width: 100%; padding: 0 2px; box-sizing: border-box; }
     .countdown-box { min-width: 65px; padding: 8px 3px; }
@@ -1220,8 +1223,8 @@ main {
     #rekening-section { padding: 5px 0; }
     .rekening-container { max-width: 500px; padding: 10px; }
     .rekening-title { font-size: 2.5em; margin-bottom: 8px; }
-    .rekening-description { font-size: 0.8em; margin-bottom: 10px; margin-top: 20px;}
-    .atm-card { width: 100%; max-width: 260px; padding: 8px; margin-bottom: 20px; margin-top: 20px;}
+    .rekening-description { font-size: 0.8em; margin-bottom: 10px; margin-top: 30px;}
+    .atm-card { width: 100%; max-width: 280px; padding: 8px; margin-bottom: 20px; margin-top: 20px;}
     .bank-name { font-size: 0.7em; }
     .chip-icon { width: 18px; height: 12px; }
     .atm-card-number { margin-bottom: 12px; }
@@ -1232,7 +1235,7 @@ main {
     }
     .copy-btn { font-size: 0.5em; padding: 2px 5px; }
     .atm-card-footer { font-size: 0.45em; }
-    .cash-gift-info { font-size: 0.8em; margin-top: 30px; line-height: 1; }
+    .cash-gift-info { font-size: 0.8em; margin-top: 50px; line-height: 1; }
     
     /* RSVP */
     .rsvp-container { max-width: 500px; padding: 15px 10px; }
@@ -1245,8 +1248,13 @@ main {
     }
     
     /* OPSI 1: Solusi Terbaik (Mencegah Zoom di iPhone) */
-    .form-input, .form-textarea, .form-select { 
+    .form-input, .form-textarea { 
         font-size: 12px;
+        padding: 8px;
+        color: black;
+    }
+    .form-select{
+        font-size: 13px;
         padding: 8px;
         color: black;
     }
